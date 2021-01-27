@@ -1,19 +1,28 @@
 <template>
-  <input @keyup="showMessage($event)" />
-  <h1>{{ message }}</h1>
+  <input v-model="message" />
+  <h1>{{ msg }}</h1>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      message: "Hello World!!!",
+      msg: "Hello World!!!",
     }
   },
-  methods: {
-    showMessage(event) {
-      this.message = event.target.value;
+  computed: {
+    message: {
+      set: function(val) {
+        // ....
+
+        this.msg = val;
+      },
+      get: function() {
+        // ...
+
+        return this.msg;
+      }
     }
-  },
+  }
 }
 </script>
