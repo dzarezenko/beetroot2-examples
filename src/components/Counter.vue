@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <h1>{{ counter }}</h1>
+    <h1 :style="`color: ${color}`">{{ counter }}</h1>
     <button @click="counter--">-</button><button @click="counter++">+</button>
 
   </div>  
@@ -13,7 +13,8 @@ export default {
     counter: {
       type: Number,
       default: 0
-    }
+    },
+    color: String,
   },
   /*data() {
     return {
