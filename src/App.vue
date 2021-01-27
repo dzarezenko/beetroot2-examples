@@ -4,10 +4,25 @@
   <p v-text="message"></p>
 
   <div v-html="link"></div>
+
+  <Counter />
+
+  <Counter />
+
+  <Counter />
+
+  <Counter />
+
+  <Counter />
 </template>
 
 <script>
+import Counter from "./components/Counter";
+
 export default {
+  components: {
+    Counter
+  },
   data() {
     return {
       message: "Hello World!!!",
