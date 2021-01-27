@@ -5,15 +5,15 @@
 
   <div v-html="link"></div>
 
-  <Counter color="red" />
+  <Counter color="cl-red" />
 
-  <Counter color="green" :counter="initialValue" />
+  <Counter color="cl-green" :counter="initialValue" />
 
-  <Counter color="blue" counter="2" />
+  <Counter color="cl-blue" counter="2" />
 
-  <Counter color="orange" counter="3" />
+  <Counter color="cl-orange" counter="3" />
 
-  <Counter color="purple" counter="-7" />
+  <Counter color="cl-purple" counter="-7" />
 </template>
 
 <script>
