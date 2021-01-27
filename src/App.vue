@@ -7,13 +7,13 @@
 
   <Counter />
 
-  <Counter />
+  <Counter :counter="initialValue" />
 
-  <Counter />
+  <Counter counter="2" />
 
-  <Counter />
+  <Counter counter="3" />
 
-  <Counter />
+  <Counter counter="-7" />
 </template>
 
 <script>
@@ -33,6 +33,12 @@ export default {
     showMessage(event) {
       this.message = event.target.value;
     }
-  }
+  },
+  computed: {
+    initialValue() {
+      return 7 * 7;
+    },
+  },
+
 }
 </script>

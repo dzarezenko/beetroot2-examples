@@ -9,11 +9,17 @@
 
 <script>
 export default {
-  data() {
+  props: {
+    counter: {
+      type: Number,
+      default: 0
+    }
+  },
+  /*data() {
     return {
       counter: 0,
     }
-  }
+  }*/
 }
 </script>
 
