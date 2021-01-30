@@ -5,15 +5,8 @@
 
   <div v-html="link"></div>
 
-  <Counter color="cl-red" />
+  <Counter v-for="i in colors.length" :key="i" :color="`cl-${colors[i-1]}`" :counter="counters[i-1]" />
 
-  <Counter color="cl-green" :counter="initialValue" />
-
-  <Counter color="cl-blue" counter="2" />
-
-  <Counter color="cl-orange" counter="3" />
-
-  <Counter color="cl-purple" counter="-7" />
 </template>
 
 <script>
@@ -27,6 +20,9 @@ export default {
     return {
       message: "Hello World!!!",
       link: `<a href="http://www.google.com">Google</a>`,
+
+      colors: ["red", "green", "blue", "orange", "purple"],
+      counters: [7, 13, 21, 9, 3]
     }
   },
   methods: {
